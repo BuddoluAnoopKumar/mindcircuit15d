@@ -2,17 +2,17 @@ pipeline{
    agent any
 
    stages{
-      stage(git checkout) {
+      stage(CHECKOUT) {
         steps {
         echo 'git clone the code'
         git branch: 'main', url: 'https://github.com/BuddoluAnoopKumar/mindcircuit15d.git' 
      }
-}
-     stage(build) {
+   }
+     stage(BUILD) {
         steps {
-        echo 'maven build '
+        echo 'maven build'
          sh 'mvn clean install'
        }
-}
+     }
 
 }
