@@ -1,0 +1,18 @@
+pipeline{
+   agent any
+
+   stages{
+      stage(git checkout) {
+        steps {
+        echo 'git clone the code'
+        git branch: 'main',url: 
+     }
+}
+     stage(build) {
+        steps {
+        echo 'maven build '
+         sh 'mvn clean install'
+       }
+}
+
+}
