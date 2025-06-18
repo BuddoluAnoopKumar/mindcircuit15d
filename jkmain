@@ -5,7 +5,7 @@ pipeline{
       stage(git checkout) {
         steps {
         echo 'git clone the code'
-        git branch: 'main',url: 
+        git branch: 'main', url: 'https://github.com/BuddoluAnoopKumar/mindcircuit15d.git' 
      }
 }
      stage(build) {
